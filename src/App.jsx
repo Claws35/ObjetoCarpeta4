@@ -12,10 +12,10 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 function App() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-gray-100 overflow-hidden relative">
+    <div className="h-screen flex flex-col items-center justify-center bg-[#f6f2e6] overflow-hidden relative ">
       <h1 className="text-4xl font-bold mb-8 z-10">Mi camino creativo</h1>
 
-      <div className="w-full h-[40vh] relative mt-10 z-0">
+      <div className="w-full h-[60vh] relative mt-10 z-0">
         {/* Swiper container */}
         <Swiper
           effect={"coverflow"}
@@ -30,7 +30,6 @@ function App() {
             modifier: 1,
             slideShadows: false,
           }}
-          pagination={{ clickable: true }}
           navigation={true}
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="w-full h-full"
@@ -38,17 +37,18 @@ function App() {
           {carteles.map((cartel) => (
             <SwiperSlide
               key={cartel.id}
-              className="!w-[300px] !h-[250px] relative "
+              className="!w-[300px] !h-[380px] relative "
             >
               {/* Cartel */}
               <Cartel
                 titulo={cartel.titulo}
                 descripcion={cartel.descripcion}
                 imagen={cartel.imagen}
+                link={cartel.link}
               />
 
               {/* Línea naranja individual para cada cartel */}
-              <div className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-[120%] h-4 bg-[#f1ae3f] "></div>
+              <div className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 w-[120%] h-4 bg-[#f1ae3f] "></div>
             </SwiperSlide>
           ))}
         </Swiper>
