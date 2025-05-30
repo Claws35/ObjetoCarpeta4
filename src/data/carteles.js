@@ -81,7 +81,7 @@ const carteles = [
     titulo: "Multimedia 2",
     descripcion: "Material multimedia parte 2",
     imagen: imagenPortadaMultimedia2,
-    link: "https://www.youtube.com/watch?v=FdgHpvm7IUE",
+    link: "https://youtu.be/PZhBUj1dOZg",
   },
   {
     id: 3,
